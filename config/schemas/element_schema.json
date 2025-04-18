@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "elements": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {"type": "string"},
+            "selector": {"type": "string"},
+            "type": {"enum": ["text_input", "dropdown", "date_picker", "clickable"]}
+          },
+          "required": ["name", "selector", "type"]
+        }
+      }
+    },
+    "required": ["elements"]
+  }

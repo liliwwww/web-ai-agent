@@ -1,0 +1,148 @@
+# src/utils/ai_integration.py
+import json
+import logging
+from typing import Dict, List, Optional
+from pathlib import Path
+from deepseek_api import DeepSeekClient
+from jsonschema import validate, ValidationError
+
+logger = logging.getLogger(__name__)
+
+class AIIntegration:
+    def __init__(self, api_key: str, config_dir: Path = Path("config")):
+        self.client = DeepSeekClient(api_key=api_key)
+        
+        print(f">>>AIIntegration api_key>>> {api_key}")
+        self.schema_dir = config_dir / "schemas"
+        self._load_schemas()
+        
+    def _load_schemas(self):
+        """加载JSON Schema验证模板"""
+        self.schemas = {
+            "action": self._load_schema("action_schema.json"),
+            "element": self._load_schema("element_schema.json")
+        }
+    
+    def _load_schema(self, filename: str) -> Dict:
+        schema_path = self.schema_dir / filename
+        try:
+            with open(schema_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            logger.error(f"Schema加载失败: {str(e)}")
+            raise
+
+    def generate_actions(self, command: str, context: Dict) -> List[Dict]:
+        """
+        生成操作序列
+        :param command: 自然语言指令
+        :param context: 当前页面上下文信息
+        :return: 操作序列
+        """
+        prompt = self._build_action_prompt(command, context)
+        try:
+            response = self.client.generate_structured(
+                prompt=prompt,
+                schema=self.schemas["action"],
+                temperature=0.3,
+                max_tokens=2000
+            )
+            self._validate_response(response, "action")
+            return response["actions"]
+        except ValidationError as e:
+            logger.error(f"响应验证失败: {e.message}")
+            raise
+        except Exception as e:
+            logger.error(f"操作生成失败: {str(e)}")
+            raise
+
+    def recognize_elements(self, html: str) -> Dict:
+        """
+        识别页面元素
+        :param html: HTML片段
+        :return: 元素配置字典
+        """
+        prompt = self._build_element_prompt(html)
+        try:
+            response = self.client.generate_structured(
+                prompt=prompt,
+                schema=self.schemas["element"],
+                temperature=0.2,
+                max_tokens=3000
+            )
+            self._validate_response(response, "element")
+            return response
+        except ValidationError as e:
+            logger.error(f"元素识别响应异常: {e.message}")
+            raise
+        except Exception as e:
+            logger.error(f"元素识别失败: {str(e)}")
+            raise
+
+    def _build_action_prompt(self, command: str, context: Dict) -> str:
+        """构建操作生成提示词"""
+        elements = context.get("elements", {})
+        return f"""
+作为Web自动化专家，请将以下指令转换为操作序列：
+
+**当前页面元素配置**:
+{json.dumps(elements, indent=2, ensure_ascii=False)}
+
+**指令解析规则**:
+1. 严格匹配元素名称
+2. 数值参数使用{{value}}表示
+3. 日期参数使用YYYY-MM-DD格式
+
+**用户指令**: {command}
+
+请按指定JSON格式响应，不要包含额外内容。"""
+
+    def _build_element_prompt(self, html: str) -> str:
+        """构建元素识别提示词"""
+        return f"""
+作为前端开发专家，请分析以下HTML片段：
+
+**识别要求**:
+1. 找出所有交互元素（输入框、按钮、下拉菜单等）
+2. 生成语义化的元素名称（如：'登录按钮'）
+3. 生成可靠的CSS选择器（优先使用aria-label/id/name）
+4. 分类元素类型：[text_input, dropdown, date_picker, clickable]
+
+**HTML片段**:
+{html[:3000]}{'...' if len(html)>3000 else ''}
+
+请按指定JSON格式响应，不要包含解释性文字。"""
+
+    def _validate_response(self, response: Dict, schema_type: str):
+        """验证响应数据结构"""
+        try:
+            validate(instance=response, schema=self.schemas[schema_type])
+        except ValidationError as e:
+            logger.error(f"Schema验证失败: {e.message}")
+            raise
+
+class EnhancedDeepSeekClient(DeepSeekClient):
+    """扩展的DeepSeek客户端"""
+    
+    def generate_structured_v2(self, prompt: str, schema: Dict, **kwargs):
+        """优化版本的结构化生成"""
+        enhanced_prompt = f"{prompt}\n\n请严格遵循以下JSON格式："
+        return super().generate_structured(enhanced_prompt, schema, **kwargs)
+
+# 使用示例
+if __name__ == "__main__":
+    ai = AIIntegration(api_key="your_api_key_here")
+    
+    # 元素识别测试
+    sample_html = "<input id='username' name='user'>"
+    elements = ai.recognize_elements(sample_html)
+    print("识别到的元素:", elements)
+    
+    # 操作生成测试
+    actions = ai.generate_actions("登录测试用户", {
+        "elements": {
+            "用户名输入框": {"selector": "#username", "type": "text_input"},
+            "登录按钮": {"selector": "button.login", "type": "clickable"}
+        }
+    })
+    print("生成的操作序列:", actions)

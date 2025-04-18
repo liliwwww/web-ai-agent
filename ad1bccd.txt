@@ -1,0 +1,444 @@
+========================================
+<body> 标签下第 1 层级、第 2 层级和第 3 层级的标签信息：
+========================================
+
+第 1 层级子标签 #1:
+标签名: div
+属性: {'id': 'bjui-window'}
+----------------------------------------
+  第 2 层级子标签 #1:
+  标签名: header
+属性: {'id': 'bjui-header'}
+  ----------------------------------------
+    第 3 层级子标签 #1:
+    标签名: div
+属性: {'class': ['bjui-navbar-header']}
+    完整内容:
+<div class="bjui-navbar-header">
+<button class="btn bjui-navbar-toggle btn-default" data-target="#bjui-navbar-collapse" data-toggle="collapse" style="display: none;" type="button">
+<i class="fa fa-bars"></i>
+</button>
+<tracingprintstream class="bjui-navbar-logo" href="#"><span style="font-weight: bold;font-size: 22px;line-height:56px;margin-left:20px;">联动优势管理后台</span></tracingprintstream>
+</div>
+    ----------------------------------------
+    第 3 层级子标签 #2:
+    标签名: nav
+属性: {'id': 'bjui-navbar-collapse'}
+    完整内容:
+<nav id="bjui-navbar-collapse">
+<ul class="bjui-navbar-right">
+<li class="datetime"><div><span id="bjui-date">2025/04/14</span> <span id="bjui-clock">19:03:48</span></div></li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">我的账户 <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a data-options="{id:'dialog',title:'修改密码',width:'450',height:'345'}" data-toggle="dialog" href="/yhbackstage/AdminInfo/resetPass?admin_id=1 "><span class="glyphicon glyphicon-lock"></span>修改密码 </a></li>
+</ul>
+</li>
+<li class="dropdown"><a class="red" href="javascript:;" onclick="loginUp()" width="130"> <span class="glyphicon glyphicon-off"></span>注销登录</a></li>
+<li class="dropdown"><a class="dropdown-toggle theme blue" data-toggle="dropdown" href="#" title="切换皮肤"><i class="fa fa-tree"></i></a>
+<ul class="dropdown-menu" id="bjui-themes" role="menu">
+<li><a class="theme_default" data-theme="default" data-toggle="theme" href="javascript:;"> <i class="fa fa-tree"></i> 黑白分明  </a></li>
+<li><a class="theme_orange" data-theme="orange" data-toggle="theme" href="javascript:;"> <i class="fa fa-tree"></i> 橘子红了</a></li>
+<li><a class="theme_purple" data-theme="purple" data-toggle="theme" href="javascript:;"> <i class="fa fa-tree"></i> 紫罗兰</a></li>
+<li class="active"><a class="theme_blue" data-theme="blue" data-toggle="theme" href="javascript:;"> <i class="fa fa-tree"></i> 天空蓝</a></li>
+<li><a class="theme_green" data-theme="green" data-toggle="theme" href="javascript:;"> <i class="fa fa-tree"></i> 绿草如茵</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+    ----------------------------------------
+    第 3 层级子标签 #3:
+    标签名: div
+属性: {'id': 'bjui-hnav'}
+    完整内容:
+<div id="bjui-hnav">
+<button class="btn btn-default bjui-hnav-more-left" style="display: none;" title="导航菜单左移" type="button"><i class="fa fa-angle-double-left"></i></button>
+<button class="btn btn-default bjui-hnav-more-right" style="display: inline-block;" title="导航菜单右移" type="button"><i class="fa fa-angle-double-right"></i></button>
+</div>
+    ----------------------------------------
+  第 2 层级子标签 #2:
+  标签名: div
+属性: {'id': 'bjui-container', 'style': 'height: 633px;'}
+  ----------------------------------------
+    第 3 层级子标签 #1:
+    标签名: div
+属性: {'id': 'bjui-leftside', 'style': 'height: 100%;'}
+    完整内容:
+<div id="bjui-leftside" style="height: 100%;">
+<div id="bjui-sidebar-s" style="height: 100%;">
+<div class="collapse"></div>
+</div>
+<div id="bjui-sidebar" style="height: 100%;">
+<div class="toggleCollapse"><h2><i class="fa fa-bars"></i> 导航栏 <i class="fa fa-bars"></i></h2><a class="lock" data-original-title="" href="javascript:;" title=""><i class="fa fa-lock"></i></a></div>
+<div class="panel-group panel-main collapse in" data-heightbox="#bjui-sidebar" data-offsety="26" data-toggle="accordion" id="bjui-accordionmenu" style="height: 607px;"><div class="panel panel-default collapse in" style=""> <div class="panel-heading active"> <h4 class="panel-title"><a class="" data-parent="#bjui-accordionmenu" data-toggle="collapse" href="#bjui-collapse0"><i class="fa fa-table"></i> 代理商管理<b><i class="fa fa-angle-down"></i></b></a></h4> </div> <div class="panel-collapse collapse in" id="bjui-collapse0"> <div class="panel-body" style="height: 579px;"> <ul class="ztree ztree_main" data-expand-all="true" data-faicon="table" data-on-click="MainMenuClick" data-toggle="ztree" id="bjui-hnav-tree02000000"><li class="level0" hidefocus="true" id="bjui-hnav-tree02000000_1" tabindex="0" treenode=""><span class="button level0 switch root_open" id="bjui-hnav-tree02000000_1_switch" title="" treenode_switch=""></span><a class="level0 faicon" id="bjui-hnav-tree02000000_1_a" onclick="" style="" target="_blank" title="代理商管理 " treenode_a=""><span class="button ico_open" id="bjui-hnav-tree02000000_1_ico" style="" title="" treenode_ico=""><i class="fa fa-folder-open-o"></i></span><span id="bjui-hnav-tree02000000_1_span">代理商管理 </span></a><ul class="level0" id="bjui-hnav-tree02000000_1_ul" style="overflow: hidden;"><li class="level1" hidefocus="true" id="bjui-hnav-tree02000000_2" tabindex="0" treenode=""><span class="button level1 switch center_open" id="bjui-hnav-tree02000000_2_switch" title="" treenode_switch=""></span><a class="level1 faicon" href="javascript:;" id="bjui-hnav-tree02000000_2_a" onclick="" style="" target="_blank" title="业务员管理" treenode_a=""><span class="button ico_open" id="bjui-hnav-tree02000000_2_ico" style="" title="" treenode_ico=""><i class="fa fa-folder-open-o"></i></span><span id="bjui-hnav-tree02000000_2_span">业务员管理</span></a><ul class="level1 line" id="bjui-hnav-tree02000000_2_ul" style=""><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_3" tabindex="0" treenode=""><span class="button level2 switch bottom_docu" id="bjui-hnav-tree02000000_3_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/Salesman/list/?carte_id=61" id="bjui-hnav-tree02000000_3_a" onclick="" style="" target="_blank" title="业务员信息" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_3_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_3_span">业务员信息</span></a></li></ul></li><li class="level1" hidefocus="true" id="bjui-hnav-tree02000000_4" tabindex="0" treenode=""><span class="button level1 switch center_open" id="bjui-hnav-tree02000000_4_switch" title="" treenode_switch=""></span><a class="level1 faicon" href="javascript:;" id="bjui-hnav-tree02000000_4_a" onclick="" style="" target="_blank" title="代理商管理" treenode_a=""><span class="button ico_open" id="bjui-hnav-tree02000000_4_ico" style="" title="" treenode_ico=""><i class="fa fa-folder-open-o"></i></span><span id="bjui-hnav-tree02000000_4_span">代理商管理</span></a><ul class="level1 line" id="bjui-hnav-tree02000000_4_ul" style=""><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_5" tabindex="0" treenode=""><span class="button level2 switch center_docu" id="bjui-hnav-tree02000000_5_switch" title="" treenode_switch=""></span><a class="level2 faicon curSelectedNode" href="/yhbackstage/AgentInfo/applylist/?carte_id=62" id="bjui-hnav-tree02000000_5_a" onclick="" style="" target="_blank" title="代理商申请" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_5_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_5_span">代理商申请</span></a></li><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_6" tabindex="0" treenode=""><span class="button level2 switch center_docu" id="bjui-hnav-tree02000000_6_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/AgentInfo/firsttrial/?carte_id=223" id="bjui-hnav-tree02000000_6_a" onclick="" style="" target="_blank" title="代理商初审" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_6_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_6_span">代理商初审</span></a></li><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_7" tabindex="0" treenode=""><span class="button level2 switch center_docu" id="bjui-hnav-tree02000000_7_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/AgentInfo/verifylist/?carte_id=225" id="bjui-hnav-tree02000000_7_a" onclick="" style="" target="_blank" title="代理商终审" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_7_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_7_span">代理商终审</span></a></li><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_8" tabindex="0" treenode=""><span class="button level2 switch center_docu" id="bjui-hnav-tree02000000_8_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/AgentInfo/normallist/?carte_id=226" id="bjui-hnav-tree02000000_8_a" onclick="" style="" target="_blank" title="正式代理商" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_8_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_8_span">正式代理商</span></a></li><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_9" tabindex="0" treenode=""><span class="button level2 switch bottom_docu" id="bjui-hnav-tree02000000_9_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/AgentInfo/MatchingSales/?carte_id=2506" id="bjui-hnav-tree02000000_9_a" onclick="" style="" target="_blank" title="品牌方代理商" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_9_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_9_span">品牌方代理商</span></a></li></ul></li><li class="level1" hidefocus="true" id="bjui-hnav-tree02000000_10" tabindex="0" treenode=""><span class="button level1 switch center_docu" id="bjui-hnav-tree02000000_10_switch" title="" treenode_switch=""></span><a class="level1 faicon" href="/yhbackstage/DistributionAdjust/list/?carte_id=566" id="bjui-hnav-tree02000000_10_a" onclick="" style="" target="_blank" title="代理商分润调整项" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_10_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_10_span">代理商分润调整项</span></a></li><li class="level1" hidefocus="true" id="bjui-hnav-tree02000000_11" tabindex="0" treenode=""><span class="button level1 switch center_open" id="bjui-hnav-tree02000000_11_switch" title="" treenode_switch=""></span><a class="level1 faicon" href="javascript:;" id="bjui-hnav-tree02000000_11_a" onclick="" style="" target="_blank" title="代理商账户管理" treenode_a=""><span class="button ico_open" id="bjui-hnav-tree02000000_11_ico" style="" title="" treenode_ico=""><i class="fa fa-folder-open-o"></i></span><span id="bjui-hnav-tree02000000_11_span">代理商账户管理</span></a><ul class="level1 line" id="bjui-hnav-tree02000000_11_ul" style=""><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_12" tabindex="0" treenode=""><span class="button level2 switch center_docu" id="bjui-hnav-tree02000000_12_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/ProfitSbOrderTwo/examlistAgent/?carte_id=1188" id="bjui-hnav-tree02000000_12_a" onclick="" style="" target="_blank" title="分润审核单" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_12_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_12_span">分润审核单</span></a></li><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_13" tabindex="0" treenode=""><span class="button level2 switch center_docu" id="bjui-hnav-tree02000000_13_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/ProfitSbOrderTwo/excellentAccount/?carte_id=1189" id="bjui-hnav-tree02000000_13_a" onclick="" style="" target="_blank" title="优付账户查询" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_13_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_13_span">优付账户查询</span></a></li><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_14" tabindex="0" treenode=""><span class="button level2 switch center_docu" id="bjui-hnav-tree02000000_14_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/AgentWallet/agentWalletList/?carte_id=2208" id="bjui-hnav-tree02000000_14_a" onclick="" style="" target="_blank" title="代理商钱包查询" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_14_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_14_span">代理商钱包查询</span></a></li><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_15" tabindex="0" treenode=""><span class="button level2 switch center_docu" id="bjui-hnav-tree02000000_15_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/CardExamine/list/?carte_id=2886" id="bjui-hnav-tree02000000_15_a" onclick="" style="" target="_blank" title="代理商结算卡管理" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_15_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_15_span">代理商结算卡管理</span></a></li><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_16" tabindex="0" treenode=""><span class="button level2 switch bottom_docu" id="bjui-hnav-tree02000000_16_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/WalletDetails/withdrawalList/?carte_id=2887" id="bjui-hnav-tree02000000_16_a" onclick="" style="" target="_blank" title="代理商提现明细" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_16_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_16_span">代理商提现明细</span></a></li></ul></li><li class="level1" hidefocus="true" id="bjui-hnav-tree02000000_17" tabindex="0" treenode=""><span class="button level1 switch center_docu" id="bjui-hnav-tree02000000_17_switch" title="" treenode_switch=""></span><a class="level1 faicon" href="/yhbackstage/ProfitSbOrderTwo/downloadList/?carte_id=1199" id="bjui-hnav-tree02000000_17_a" onclick="" style="" target="_blank" title="下载列表" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_17_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_17_span">下载列表</span></a></li><li class="level1" hidefocus="true" id="bjui-hnav-tree02000000_18" tabindex="0" treenode=""><span class="button level1 switch center_open" id="bjui-hnav-tree02000000_18_switch" title="" treenode_switch=""></span><a class="level1 faicon" href="javascript:;" id="bjui-hnav-tree02000000_18_a" onclick="" style="" target="_blank" title="代理商机具管理信息化" treenode_a=""><span class="button ico_open" id="bjui-hnav-tree02000000_18_ico" style="" title="" treenode_ico=""><i class="fa fa-folder-open-o"></i></span><span id="bjui-hnav-tree02000000_18_span">代理商机具管理信息化</span></a><ul class="level1 line" id="bjui-hnav-tree02000000_18_ul" style=""><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_19" tabindex="0" treenode=""><span class="button level2 switch center_docu" id="bjui-hnav-tree02000000_19_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/AgPoSell/listPage_100011805/?carte_id=1627" id="bjui-hnav-tree02000000_19_a" onclick="" style="" target="_blank" title="UPOS机具管理" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_19_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_19_span">UPOS机具管理</span></a></li><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_20" tabindex="0" treenode=""><span class="button level2 switch center_docu" id="bjui-hnav-tree02000000_20_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/AgPoSell/listPage_100011620/?carte_id=1628" id="bjui-hnav-tree02000000_20_a" onclick="" style="" target="_blank" title="SK机具管理" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_20_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_20_span">SK机具管理</span></a></li><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_21" tabindex="0" treenode=""><span class="button level2 switch center_docu" id="bjui-hnav-tree02000000_21_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/AgPoSell/listPage_100011599/?carte_id=1629" id="bjui-hnav-tree02000000_21_a" onclick="" style="" target="_blank" title="LV机具管理" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_21_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_21_span">LV机具管理</span></a></li><li class="level2" hidefocus="true" id="bjui-hnav-tree02000000_22" tabindex="0" treenode=""><span class="button level2 switch bottom_docu" id="bjui-hnav-tree02000000_22_switch" title="" treenode_switch=""></span><a class="level2 faicon" href="/yhbackstage/AgPoSell/list/?carte_id=1642" id="bjui-hnav-tree02000000_22_a" onclick="" style="" target="_blank" title="代理商机具管理" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_22_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_22_span">代理商机具管理</span></a></li></ul></li><li class="level1" hidefocus="true" id="bjui-hnav-tree02000000_23" tabindex="0" treenode=""><span class="button level1 switch center_docu" id="bjui-hnav-tree02000000_23_switch" title="" treenode_switch=""></span><a class="level1 faicon" href="/yhbackstage/ActAgentActive/agentActiveAggList/?carte_id=1846" id="bjui-hnav-tree02000000_23_a" onclick="" style="" target="_blank" title="代理商活动配置" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_23_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_23_span">代理商活动配置</span></a></li><li class="level1" hidefocus="true" id="bjui-hnav-tree02000000_24" tabindex="0" treenode=""><span class="button level1 switch center_docu" id="bjui-hnav-tree02000000_24_switch" title="" treenode_switch=""></span><a class="level1 faicon" href="/yhbackstage/TSecDepoDet/list/?carte_id=2486" id="bjui-hnav-tree02000000_24_a" onclick="" style="" target="_blank" title="代理商押金活动保证金查询" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_24_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_24_span">代理商押金活动保证金查询</span></a></li><li class="level1" hidefocus="true" id="bjui-hnav-tree02000000_25" tabindex="0" treenode=""><span class="button level1 switch center_docu" id="bjui-hnav-tree02000000_25_switch" title="" treenode_switch=""></span><a class="level1 faicon" href="/yhbackstage/AgentBill/agentBillList/?carte_id=2566" id="bjui-hnav-tree02000000_25_a" onclick="" style="" target="_blank" title="账单查询" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_25_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_25_span">账单查询</span></a></li><li class="level1" hidefocus="true" id="bjui-hnav-tree02000000_26" tabindex="0" treenode=""><span class="button level1 switch bottom_docu" id="bjui-hnav-tree02000000_26_switch" title="" treenode_switch=""></span><a class="level1 faicon" href="/yhbackstage/AgentPfEdit/list/?carte_id=2829" id="bjui-hnav-tree02000000_26_a" onclick="" style="" target="_blank" title="前置对公代理商分润调整项" treenode_a=""><span class="button ico_docu" id="bjui-hnav-tree02000000_26_ico" style="" title="" treenode_ico=""><i class="fa fa-table"></i></span><span id="bjui-hnav-tree02000000_26_span">前置对公代理商分润调整项</span></a></li></ul></li></ul></div> </div></div></div>
+</div>
+</div>
+    ----------------------------------------
+    第 3 层级子标签 #2:
+    标签名: div
+属性: {'id': 'bjui-splitBarProxy', 'style': 'height: 100%;'}
+    完整内容:
+<div id="bjui-splitBarProxy" style="height: 100%;"></div>
+    ----------------------------------------
+    第 3 层级子标签 #3:
+    标签名: div
+属性: {'id': 'bjui-splitBar', 'style': 'height: 100%;'}
+    完整内容:
+<div id="bjui-splitBar" style="height: 100%;"></div>
+    ----------------------------------------
+    第 3 层级子标签 #4:
+    标签名: div
+属性: {'id': 'bjui-navtab', 'class': ['tabsPage'], 'style': 'width: 1413.33px;'}
+    完整内容:
+<div class="tabsPage" id="bjui-navtab" style="width: 1413.33px;">
+<div class="tabsPageHeader">
+<div class="tabsPageHeaderContent">
+<ul class="navtab-tab nav nav-tabs" style="left: 0px;">
+<li class="" data-url=""><a href="javascript:;"><span><i class="fa fa-home"></i> 我的主页</span></a></li>
+<li class="active"><a href="javascript:" title="代理商申请"><span>代理商申请</span></a><span class="close">×</span></li></ul>
+</div>
+<div class="tabsLeft" style="display: none;"><i class="fa fa-angle-double-left"></i></div>
+<div class="tabsRight" style="display: none;"><i class="fa fa-angle-double-right"></i></div>
+<div class="tabsMore"><i class="fa fa-angle-double-down"></i></div>
+</div>
+<ul class="tabsMoreList" style="display: none;">
+<li class=""><a href="javascript:;">我的主页</a></li>
+<li class="active"><a href="javascript:" title="代理商申请">代理商申请</a></li></ul>
+<div class="navtab-panel tabsPageContent" style="height: 607px;">
+<div class="navtabPage unitBox fade in" style="display: none;">
+<div class="bjui-pageContent" style="background: rgb(255, 255, 255); top: 0px; bottom: 0px;">
+<span style="font-weight:bold;font-size:16px;">欢迎使用管理平台:admin[管理员]</span>
+</div>
+</div>
+<div class="navtabPage unitBox" style="display: block;"><div class="bjui-pageHeader">
+<form action="/yhbackstage/AgentInfo/applylist" class="nice-validator n-red" data-toggle="ajaxsearch" id="pagerForm" method="post" novalidate="novalidate">
+<div class="bjui-searchBar">
+<p>
+<input class="form-control" name="showType" size="15" type="hidden" value="1"/>  
+             <span>代理商编号：</span>
+<input class="form-control" name="agent_num" size="15" style="width: 150px;" type="text" value="100046726"/>  
+
+          <span>代理商名称：</span>
+<input class="form-control" name="agent_name" size="15" style="width: 150px;" type="text" value=""/>  
+          <span>法人身份证号码(精准查询)：</span>
+<input al="" class="form-control" name="_identity_num" placeholder="输入全部身份证号检索" size="15" style="font-size: 12px; width: 150px;" type="text" value=""/>  
+      </p>
+<p>
+             <span>销售经理:</span>  
+          <input data-target="#haha1" id="sm_num" name="sign_sale.sm_num" readonly="readonly" style="width: 120px" type="hidden" value=""/>
+<input class="form-control" data-target="#haha1" id="sm_name" name="sign_sale.sm_name" readonly="readonly" style="width: 120px" type="text" value=""/>
+<button class="btn btn-blue" data-group="sign_sale" data-icon="search" data-title="业务员查询" data-toggle="lookupbtn" data-width="1200" href="/yhbackstage/Salesman/findSales" id="haha1"><i class="fa fa-search"></i> </button>
+
+              <span>运营经理:</span> 
+          <input data-target="#haha" id="sm_num" name="maintain.sm_num" readonly="readonly" style="width: 120px" type="hidden" value=""/>
+<input class="form-control" data-target="#haha1" id="sm_name" name="maintain.sm_name" readonly="readonly" style="width: 120px" type="text" value=""/>
+<button class="btn btn-blue" data-group="maintain" data-icon="search" data-title="业务员查询" data-toggle="lookupbtn" data-width="1200" href="/yhbackstage/Salesman/findSales" id="haha"><i class="fa fa-search"></i> </button>
+
+              <span>登录账号:</span>
+<input class="form-control" data-target="#haha1" id="admin_name" name="admin_name" style="width: 120px" type="text" value=""/>
+</p>
+<p>
+                   <span>部门: </span>  
+          <select class="show-tick" data-nextselect="#j_form_department" data-refurl="/yhbackstage/Salesman/getCompanydept?comp_id={value}" data-toggle="selectpicker" id="province1" name="department" selectvl="" style="display: none;">
+<option value="">请选择</option>
+<option value="201">
+                          测试团队
+                      </option>
+<option value="202">
+                          测试小组
+                      </option>
+</select></p><div class="btn-group bootstrap-select show-tick" style="width: 69px;"><button class="btn dropdown-toggle selectpicker btn-default" data-id="province1" data-toggle="dropdown" title="请选择" type="button"><span class="filter-option pull-left">请选择</span> <span class="caret"></span></button><div class="dropdown-menu open" style="min-width: 0px;"><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" data-original-index="0"><a class="" data-normalized-text='&lt;span class="text"&gt;请选择&lt;/span&gt;' tabindex="0"><span class="text">请选择</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a class="" data-normalized-text='&lt;span class="text"&gt;
+                          测试团队
+                      &lt;/span&gt;' tabindex="0"><span class="text">
+                          测试团队
+                      </span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a class="" data-normalized-text='&lt;span class="text"&gt;
+                          测试小组
+                      &lt;/span&gt;' tabindex="0"><span class="text">
+                          测试小组
+                      </span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+
+              <span>大区: </span>  
+          <select class="show-tick" data-emptytxt="请选择" data-nextselect="#j_form_largearea" data-refurl="/yhbackstage/Salesman/getCompanydept?comp_id={value}" data-toggle="selectpicker" id="j_form_department" name="argeaarea" selectvl="" style="display: none;">
+<option value="">请选择</option>
+</select><div class="btn-group bootstrap-select show-tick" style="width: 57px;"><button class="btn dropdown-toggle selectpicker btn-default" data-id="j_form_department" data-toggle="dropdown" title="请选择" type="button"><span class="filter-option pull-left">请选择</span> <span class="caret"></span></button><div class="dropdown-menu open" style="min-width: 0px;"><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" data-original-index="0"><a class="" data-normalized-text='&lt;span class="text"&gt;请选择&lt;/span&gt;' tabindex="0"><span class="text">请选择</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+
+              <span>分公司: </span>  
+          <select class="show-tick" data-emptytxt="请选择" data-nextselect="#j_form_branchoffice" data-refurl="/yhbackstage/Salesman/getCompanydept?comp_id={value}" data-toggle="selectpicker" id="j_form_largearea" name="branchoffice" selectvl="" style="display: none;">
+<option value="">请选择</option>
+</select><div class="btn-group bootstrap-select show-tick" style="width: 57px;"><button class="btn dropdown-toggle selectpicker btn-default" data-id="j_form_largearea" data-toggle="dropdown" title="请选择" type="button"><span class="filter-option pull-left">请选择</span> <span class="caret"></span></button><div class="dropdown-menu open" style="min-width: 0px;"><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" data-original-index="0"><a class="" data-normalized-text='&lt;span class="text"&gt;请选择&lt;/span&gt;' tabindex="0"><span class="text">请选择</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+
+               <span>审核状态：</span>  
+          <select class="show-tick" data-toggle="selectpicker" id="agent_nature" name="agent_status" selectvl="" style="height: 25px; display: none;">
+<option value="">请选择</option>
+<option value="1">未提交申请</option>
+<option value="4">已驳回</option>
+</select><div class="btn-group bootstrap-select show-tick" style="width: 81px;"><button class="btn dropdown-toggle selectpicker btn-default" data-id="agent_nature" data-toggle="dropdown" title="请选择" type="button"><span class="filter-option pull-left">请选择</span> <span class="caret"></span></button><div class="dropdown-menu open" style="min-width: 0px;"><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" data-original-index="0"><a class="" data-normalized-text='&lt;span class="text"&gt;请选择&lt;/span&gt;' tabindex="0"><span class="text">请选择</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a class="" data-normalized-text='&lt;span class="text"&gt;未提交申请&lt;/span&gt;' tabindex="0"><span class="text">未提交申请</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a class="" data-normalized-text='&lt;span class="text"&gt;已驳回&lt;/span&gt;' tabindex="0"><span class="text">已驳回</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+               <span>代理商性质：</span>  
+          <select class="show-tick" data-toggle="selectpicker" id="agent_nature" name="agent_nature" selectvl="" style="height: 25px; display: none;">
+<option value="">请选择</option>
+<option value="0">经销商</option>
+<option value="1">渠道商</option>
+</select><div class="btn-group bootstrap-select show-tick" style="width: 57px;"><button class="btn dropdown-toggle selectpicker btn-default" data-id="agent_nature" data-toggle="dropdown" title="请选择" type="button"><span class="filter-option pull-left">请选择</span> <span class="caret"></span></button><div class="dropdown-menu open" style="min-width: 0px;"><ul class="dropdown-menu inner selectpicker" role="menu"><li class="selected" data-original-index="0"><a class="" data-normalized-text='&lt;span class="text"&gt;请选择&lt;/span&gt;' tabindex="0"><span class="text">请选择</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a class="" data-normalized-text='&lt;span class="text"&gt;经销商&lt;/span&gt;' tabindex="0"><span class="text">经销商</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a class="" data-normalized-text='&lt;span class="text"&gt;渠道商&lt;/span&gt;' tabindex="0"><span class="text">渠道商</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+<p>
+             <span>添加时间(起始)：</span>
+<span class="wrap_bjui_btn_box" style="position: relative; display: inline-block;"><input class="form-control" data-toggle="datepicker" name="startlocaldate" readonly="" size="11" style="padding-right: 15px; width: 110px;" type="text" value=""/><a class="bjui-lookup" data-toggle="datepickerbtn" href="javascript:;" style="height: 22.6667px; line-height: 22.6667px;"><i class="fa fa-calendar"></i></a></span>  
+          <span>添加时间(截止)：</span>
+<span class="wrap_bjui_btn_box" style="position: relative; display: inline-block;"><input class="form-control" data-toggle="datepicker" name="endlocaldate" readonly="" size="11" style="padding-right: 15px; width: 110px;" type="text" value=""/><a class="bjui-lookup" data-toggle="datepickerbtn" href="javascript:;" style="height: 22.6667px; line-height: 22.6667px;"><i class="fa fa-calendar"></i></a></span>  
+
+            <span>有效期(起始)：</span>
+<span class="wrap_bjui_btn_box" style="position: relative; display: inline-block;"><input class="form-control" data-toggle="datepicker" name="begin_valid" readonly="" size="11" style="padding-right: 15px; width: 110px;" type="text" value=""/><a class="bjui-lookup" data-toggle="datepickerbtn" href="javascript:;" style="height: 22.6667px; line-height: 22.6667px;"><i class="fa fa-calendar"></i></a></span>  
+            <span>有效期(截止)：</span>
+<span class="wrap_bjui_btn_box" style="position: relative; display: inline-block;"><input class="form-control" data-toggle="datepicker" name="end_valid" readonly="" size="11" style="padding-right: 15px; width: 110px;" type="text" value=""/><a class="bjui-lookup" data-toggle="datepickerbtn" href="javascript:;" style="height: 22.6667px; line-height: 22.6667px;"><i class="fa fa-calendar"></i></a></span>  
+
+          <input name="showType" type="hidden" value="1"/> 
+
+           <button class="btn btn-blue" data-icon="search" type="submit"><i class="fa fa-search"></i> 查询</button> 
+           <a class="btn btn-orange" data-icon="undo" href="javascript:;" onclick="$(this).navtab('reloadForm', true)"><i class="fa fa-undo"></i> 清空查询</a> 
+      </p>
+<div style="margin-top: 1px;">
+<span><a carte_id="62" class="btn btn-blue permission" data-options="{id:'dialog',title:'添加代理商',width:'900',height:'700'}" data-toggle="dialog" href="/yhbackstage/AgentInfo/add?agent_num=" rel="AgentInfo_add"><i class="fa fa-edit"></i><span>添加代理商</span></a>  </span>
+<span><a carte_id="62" class="btn btn-blue permission" data-options="{id:'dialog',title:'编辑代理商',width:'950',height:'700'}" data-toggle="dialog" href="/yhbackstage/AgentInfo/modifyAgent?{#bjui-selected}" rel="AgentInfo_modifyAgent"><i class="fa fa-edit"></i><span>编辑代理商</span></a>  </span>
+<span><a carte_id="62" class="btn btn-blue permission" data-options="{id:'dialog',title:'上传图片资料',width:'660',height:'500'}" data-toggle="dialog" href="/yhbackstage/AgentInfo/uploadImg?{#bjui-selected}" rel="AgentInfo_uploadImg"><i class="fa fa-edit"></i><span>上传图片资料</span></a>  </span>
+<span><a carte_id="62" class="btn btn-red permission" data-confirm-msg="确定要删除代理商信息么？" data-toggle="doajax" href="/yhbackstage/AgentInfo/delete?{#bjui-selected}" rel="AgentInfo_delete" width="450"><i class="fa fa-edit"></i><span>删除代理商</span></a>  </span>
+<span><a carte_id="62" class="btn btn-blue permission" data-options="{id:'dialog',title:'导入',width:'500',height:'200'}" data-toggle="dialog" href="/yhbackstage/AgentInfo/uploadAgent" rel="AgentInfo_upload"> <i class="fa fa-edit"></i><span>导入代理商</span></a>  </span>
+</div>
+<div class="pull-right"></div>
+</div>
+<input name="pageNum" type="hidden" value="1"/>
+<input name="totalRecord" type="hidden" value="1"/>
+<input name="numPerPage" type="hidden" value="20"/>
+<input name="orderField" type="hidden" value=""/><!--【可选】查询排序-->
+<input name="orderDirection" type="hidden" value="desc"/><!--【可选】升序降序-->
+<input name="pan_enc" type="hidden" value=""/>
+<input name="belong" type="hidden" value="1"/>
+<input name="agent_name" type="hidden" value=""/>
+<input name="begin_valid" type="hidden" value=""/>
+<input name="maintain" type="hidden" value=""/>
+<input name="maintain_sm_name" type="hidden" value=""/>
+<input name="pageSize" type="hidden" value="20"/>
+<input name="argeaarea" type="hidden" value=""/>
+<input name="type" type="hidden" value="2"/>
+<input name="COMMISSARY_ENC" type="hidden" value=""/>
+<input name="agent_nature" type="hidden" value=""/>
+<input name="pageCurrent" type="hidden" value="1"/>
+<input name="link_man_enc" type="hidden" value=""/>
+<input name="commissary_enc" type="hidden" value=""/>
+<input name="link_email_enc" type="hidden" value=""/>
+<input name="_identity_num" type="hidden" value=""/>
+<input name="LINK_EMAIL_ENC" type="hidden" value=""/>
+<input name="agent_status" type="hidden" value=""/>
+<input name="startlocaldate" type="hidden" value=""/>
+<input name="params2" type="hidden" value="4"/>
+<input name="showType" type="hidden" value="1"/>
+<input name="department" type="hidden" value=""/>
+<input name="params1" type="hidden" value="1"/>
+<input name="end_valid" type="hidden" value=""/>
+<input name="endlocaldate" type="hidden" value=""/>
+<input name="LINK_MAN_ENC" type="hidden" value=""/>
+<input name="LINK_PHONE_ENC" type="hidden" value=""/>
+<input name="sign_sale" type="hidden" value=""/>
+<input name="sign_sale_sm_name" type="hidden" value=""/>
+<input name="totalRecord" type="hidden" value="0"/>
+<input name="comp_id" type="hidden" value="0"/>
+<input name="PAN_ENC" type="hidden" value=""/>
+<input name="agent_num" type="hidden" value="100046726"/>
+<input name="sign_sale.sm_num" type="hidden" value=""/>
+<input name="maintain.sm_name" type="hidden" value=""/>
+<input name="link_phone_enc" type="hidden" value=""/>
+<input name="sign_sale.sm_name" type="hidden" value=""/>
+<input name="branchoffice" type="hidden" value=""/>
+<input name="admin_name" type="hidden" value=""/>
+<input name="maintain.sm_num" type="hidden" value=""/>
+<input name="carte_id" type="hidden" value="62"/>
+<!-- 菜单ID -->
+<input name="carte_id" type="hidden" value="62"/>
+<input name="showType" type="hidden" value="1"/>
+</form>
+</div>
+<div class="bjui-pageContent tableContent bjui-resizeGrid" style="top: 165px; bottom: 28px; overflow: hidden;">
+<div class="bjui-tablefixed clearfix" style="height: 413px;">
+<div class="fixedtableHeader" style="width:1394px;overflow:hidden;"><div class="fixedtableThead"><table class="table table-bordered" style="width:1394px; max-width:1394px;"><thead><tr class="resize-head"><th style="width: 26px;"></th><th style="width: 6%;"></th><th style="width: 10%;"></th><th style="width: 7%;"></th><th style="width: 5%;"></th><th style="width: 10%;"></th><th style="width: 7%;"></th><th style="width: 4%;"></th><th style="width: 4%;"></th><th style="width: 6%;"></th><th style="width: 6%;"></th><th style="width: 6%;"></th><th style="width: 15%;"></th><th style="width: 6%;"></th><th style="width: 5%;"></th><th style="width: 4%;"></th><th style="width: 10%;"></th><th style="width: 6%;"></th><th style="width: 6%;"></th></tr>
+<tr>
+<th colsnum="0" width="26"><div class="fixedtableCol"> </div></th>
+<th colsnum="1" width="6%"><div class="fixedtableCol">代理商编号</div></th>
+<th colsnum="2" width="10%"><div class="fixedtableCol">代理商名称</div></th>
+<th colsnum="3" style="cursor: default;" width="7%"><div class="fixedtableCol">区域</div></th>
+<th colsnum="4" style="cursor: default;" width="5%"><div class="fixedtableCol">法人姓名</div></th>
+<th colsnum="5" width="10%"><div class="fixedtableCol">身份证</div></th>
+<th colsnum="6" width="7%"><div class="fixedtableCol">联系电话</div></th>
+<th colsnum="7" width="4%"><div class="fixedtableCol">状态</div></th>
+<th colsnum="8" width="4%"><div class="fixedtableCol">等级</div></th>
+<th colsnum="9" width="6%"><div class="fixedtableCol">登陆账号</div></th>
+<th colsnum="10" width="6%"><div class="fixedtableCol">销售经理</div></th>
+<th colsnum="11" width="6%"><div class="fixedtableCol">运营经理</div></th>
+<th colsnum="12" width="15%"><div class="fixedtableCol">部门-大区-分公司</div></th>
+<th colsnum="13" width="6%"><div class="fixedtableCol">有效期(起始)</div></th>
+<th colsnum="14" width="5%"><div class="fixedtableCol">有效期(截止)</div></th>
+<th colsnum="15" width="4%"><div class="fixedtableCol">添加人</div></th>
+<th colsnum="16" width="10%"><div class="fixedtableCol">添加日期</div></th>
+<th colsnum="17" width="6%"><div class="fixedtableCol">备注</div></th>
+<th colsnum="18" width="6%"><div class="fixedtableCol">操作</div></th>
+</tr>
+</thead></table></div></div>
+<div class="fixedtableScroller" style="height: 390px; overflow-y: auto;"><div class="fixedtableTbody"><table class="table table-striped table-bordered table-hover nowrap" style="width:1394px; max-width:1394px;"><thead><tr class="resize-head"><th style="width: 26px;"></th><th style="width: 6%;"></th><th style="width: 10%;"></th><th style="width: 7%;"></th><th style="width: 5%;"></th><th style="width: 10%;"></th><th style="width: 7%;"></th><th style="width: 4%;"></th><th style="width: 4%;"></th><th style="width: 6%;"></th><th style="width: 6%;"></th><th style="width: 6%;"></th><th style="width: 15%;"></th><th style="width: 6%;"></th><th style="width: 5%;"></th><th style="width: 4%;"></th><th style="width: 10%;"></th><th style="width: 6%;"></th><th style="width: 6%;"></th></tr></thead><tbody>
+<tr data-id="agent_num=100046726&amp;signs=0">
+<td><div class="iradio_minimal-purple disabled" data-icheck="agentnumra" style="position: relative;"><input data-toggle="icheck" disabled="" name="agentnumra" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;" type="radio" value="100046726"/><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div></td>
+<td>100046726</td>
+<td>autotestAPP二级代理商RUJF</td>
+<td>北京,北京市,东城区</td>
+<td>张二十</td>
+<td>1401061999****6137</td>
+<td>135****7095</td>
+<td>
+            申请
+	  </td>
+<td>
+             二级
+	  </td>
+<td>13501787095</td>
+<td><span style="color:gray">无</span></td>
+<td><span style="color:gray">无</span></td>
+<td>
+             测试团队-
+             测试-
+             测试业务员
+         </td>
+<td><span style="color:gray">无</span></td>
+<td><span style="color:gray">无</span></td>
+<td>代理商admId：86639</td>
+<td>2025-02-11 01:31:48</td>
+<td style="color:red;"><span style="color:gray">无</span></td>
+<td>
+<span><a carte_id="62" class="btn btn-blue permission" data-options="{id:'dialog',title:'查看代理商',width:'920',height:'800'}" data-toggle="dialog" href="/yhbackstage/AgentInfo/adddetail?agent_num=100046726&amp;ck=0" rel="AgentInfo_adddetail"><i class="fa fa-edit"></i><span>查看详情</span></a>  </span>
+</td>
+</tr>
+</tbody></table></div></div>
+<div class="resizeMarker" style="display:none; height:300px; left:57px;"></div><div class="resizeProxy" style="left:377px; display:none; height:300px;"></div></div>
+</div>
+<div class="bjui-pageFooter">
+<div class="pages">
+<span>每页 </span>
+<div class="selectPagesize">
+<select class="show-tick" data-toggle="selectpicker" data-toggle-change="changepagesize" name="numPerPage" selectvl="20" style="display: none;">
+<option value="10">10</option>
+<option value="20">20</option>
+<option value="50">50</option>
+<option value="100">100</option>
+<option value="200">200</option>
+</select><div class="btn-group bootstrap-select show-tick" style="width: 44px;"><button class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" title="20" type="button"><span class="filter-option pull-left">20</span> <span class="caret"></span></button><div class="dropdown-menu open" style="min-width: 0px;"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0"><a class="" data-normalized-text='&lt;span class="text"&gt;10&lt;/span&gt;' tabindex="0"><span class="text">10</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li class="selected" data-original-index="1"><a class="" data-normalized-text='&lt;span class="text"&gt;20&lt;/span&gt;' tabindex="0"><span class="text">20</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a class="" data-normalized-text='&lt;span class="text"&gt;50&lt;/span&gt;' tabindex="0"><span class="text">50</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a class="" data-normalized-text='&lt;span class="text"&gt;100&lt;/span&gt;' tabindex="0"><span class="text">100</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a class="" data-normalized-text='&lt;span class="text"&gt;200&lt;/span&gt;' tabindex="0"><span class="text">200</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+</div>
+<span> 条，共 1 条  第1/1页</span>
+</div>
+<div class="pagination-box" data-page-current="1" data-page-size="20" data-toggle="pagination" data-total="1"><ul class="pagination"> <li class="j-first disabled"> <a class="first" href="javascript:;" style="display: none;"><i class="fa fa-step-backward"></i> 首页</a> <span class="first"><i class="fa fa-step-backward"></i> 首页</span> </li> <li class="j-prev disabled"> <a class="previous" href="javascript:;" style="display: none;"><i class="fa fa-backward"></i> 上一页</a> <span class="previous"><i class="fa fa-backward"></i> 上一页</span> </li> <li class="selected j-num"><a href="javascript:;">1</a></li> <li class="j-next disabled"> <a class="next" href="javascript:;" style="display: none;">下一页 <i class="fa fa-forward"></i></a> <span class="next">下一页 <i class="fa fa-forward"></i></span> </li> <li class="j-last disabled"> <a class="last" href="javascript:;" style="display: none;">末页 <i class="fa fa-step-forward"></i></a> <span class="last">末页 <i class="fa fa-step-forward"></i></span> </li> <li class="jumpto"><span class="p-input"><input class="form-control input-sm-pages" size="2.6" title="输入跳转页码，回车确认" type="text" value="1"/></span><a class="goto" href="javascript:;" title="跳转"><i class="fa fa-chevron-right"></i></a></li></ul></div>
+</div>
+</div></div>
+</div>
+    ----------------------------------------
+  第 2 层级子标签 #3:
+  标签名: footer
+属性: {'id': 'bjui-footer'}
+  ----------------------------------------
+    第 3 层级子标签 #1:
+    标签名: a
+属性: {'href': 'javascript:void(0);', 'target': '_blank'}
+    完整内容:
+<a href="javascript:void(0);" target="_blank">联动优势电子商务有限公司</a>
+    ----------------------------------------
+
+第 1 层级子标签 #2:
+标签名: div
+属性: {'id': 'bjui-contextmenu', 'style': 'display: none;'}
+----------------------------------------
+
+第 1 层级子标签 #3:
+标签名: div
+属性: {'id': 'bjui-contextmenuShadow', 'style': 'display: none;'}
+----------------------------------------
+
+第 1 层级子标签 #4:
+标签名: div
+属性: {'id': 'bjui-resizable', 'class': ['bjui-resizable']}
+----------------------------------------
+
+第 1 层级子标签 #5:
+标签名: div
+属性: {'id': 'bjui-taskbar', 'style': 'left: 0px; bottom: -50px; display: none;'}
+----------------------------------------
+  第 2 层级子标签 #1:
+  标签名: div
+属性: {'class': ['taskbarContent']}
+  ----------------------------------------
+    第 3 层级子标签 #1:
+    标签名: ul
+属性: {}
+    完整内容:
+<ul></ul>
+    ----------------------------------------
+  第 2 层级子标签 #2:
+  标签名: div
+属性: {'class': ['taskbarLeft', 'taskbarLeftDisabled'], 'style': 'display: none;'}
+  ----------------------------------------
+    第 3 层级子标签 #1:
+    标签名: i
+属性: {'class': ['fa', 'fa-angle-double-left']}
+    完整内容:
+<i class="fa fa-angle-double-left"></i>
+    ----------------------------------------
+  第 2 层级子标签 #3:
+  标签名: div
+属性: {'class': ['taskbarRight'], 'style': 'display: none;'}
+  ----------------------------------------
+    第 3 层级子标签 #1:
+    标签名: i
+属性: {'class': ['fa', 'fa-angle-double-right']}
+    完整内容:
+<i class="fa fa-angle-double-right"></i>
+    ----------------------------------------
+
+第 1 层级子标签 #6:
+标签名: div
+属性: {'class': ['bjui-alertBackground'], 'style': 'display: none;'}
+----------------------------------------
+
+第 1 层级子标签 #7:
+标签名: div
+属性: {'id': 'bjui-calendar', 'style': 'display: none;'}
+----------------------------------------
+  第 2 层级子标签 #1:
+  标签名: div
+属性: {'class': ['main']}
+  ----------------------------------------
+    第 3 层级子标签 #1:
+    标签名: a
+属性: {'class': ['close'], 'href': 'javascript:;', 'title': '关闭'}
+    完整内容:
+<a class="close" href="javascript:;" title="关闭"><i class="fa fa-times-circle"></i></a>
+    ----------------------------------------
+    第 3 层级子标签 #2:
+    标签名: div
+属性: {'class': ['head']}
+    完整内容:
+<div class="head"> <table border="0" cellpadding="0" cellspacing="2" width="100%"> <tbody><tr> <td width="20"><a class="prev" href="javascript:;" title="上月"><i class="fa fa-arrow-left"></i></a></td> <td><select name="year"></select></td> <td><select name="month"><option value="1">一月</option><option value="2">二月</option><option value="3">三月</option><option value="4">四月</option><option value="5">五月</option><option value="6">六月</option><option value="7">七月</option><option value="8">八月</option><option value="9">九月</option><option value="10">十月</option><option value="11">十一月</option><option value="12">十二月</option></select></td> <td width="20"><a class="next" href="javascript:;" title="下月"><i class="fa fa-arrow-right"></i></a></td> </tr> </tbody></table> </div>
+    ----------------------------------------
+    第 3 层级子标签 #3:
+    标签名: div
+属性: {'class': ['body']}
+    完整内容:
+<div class="body"> <dl class="dayNames"><dt>日</dt><dt>一</dt><dt>二</dt><dt>三</dt><dt>四</dt><dt>五</dt><dt>六</dt></dl> <dl class="days"><!-- date list --></dl> <div style="clear:both;height:0;line-height:0"></div> </div>
+    ----------------------------------------
+    第 3 层级子标签 #4:
+    标签名: div
+属性: {'class': ['foot']}
+    完整内容:
+<div class="foot"> <table class="time"> <tbody><tr> <td> <input class="hh form-control" data-end="23" data-start="0" data-type="hh" maxlength="2" style="" type="text"/><span class="datepickermmcolon">:</span><input class="mm form-control" data-end="59" data-start="0" data-type="mm" maxlength="2" style="" type="text"/><span class="datepickersscolon">:</span><input class="ss form-control" data-end="59" data-start="0" data-type="ss" maxlength="2" style="" type="text"/> </td> <td><ul><li class="up" data-add="1">∧</li><li class="down">∨</li></ul></td> </tr> </tbody></table> <button class="clearBtn btn btn-orange" type="button">清空</button> <button class="okBtn btn btn-default" type="button">确定</button> </div>
+    ----------------------------------------
+    第 3 层级子标签 #5:
+    标签名: div
+属性: {'class': ['tm']}
+    完整内容:
+<div class="tm"> <ul class="hh"> <li>0</li> <li>1</li> <li>2</li> <li>3</li> <li>4</li> <li>5</li> <li>6</li> <li>7</li> <li>8</li> <li>9</li> <li>10</li> <li>11</li> <li>12</li> <li>13</li> <li>14</li> <li>15</li> <li>16</li> <li>17</li> <li>18</li> <li>19</li> <li>20</li> <li>21</li> <li>22</li> <li>23</li> </ul> <ul class="mm"> <li>0</li> <li>5</li> <li>10</li> <li>15</li> <li>20</li> <li>25</li> <li>30</li> <li>35</li> <li>40</li> <li>45</li> <li>50</li> <li>55</li> </ul> <ul class="ss"> <li>0</li> <li>10</li> <li>20</li> <li>30</li> <li>40</li> <li>50</li> </ul> </div>
+    ----------------------------------------
+
+第 1 层级子标签 #8:
+标签名: div
+属性: {'id': 'bjui-alertMsgBox', 'class': ['bjui-alert'], 'style': 'top: -21px; display: none;'}
+----------------------------------------

@@ -1,0 +1,6 @@
+﻿playwright==1.42.0
+python-dotenv==1.0.0
+deepseek-api==
+json5==0.9.14
+pytest==8.0.2
+jsonschema==4.21.1

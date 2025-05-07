@@ -7,13 +7,22 @@ from utils.ai_integration import AIIntegration
 
 logger = logging.getLogger(__name__)
 
+
+#playwrigt辅助
+#主要三个操作
+#1. find_element
+#2. _verify_element(self, page: Page, selector: str) -> bool:
+#3. _fallback_locate
+#4. _fallback_locate
+
+
 class ElementLocator:
     def __init__(self, buffer: BufferManager, ai_integration: AIIntegration):
         self.buffer = buffer
         self.ai_integration = ai_integration
 
 
-    # 返回的是page 的 element
+    # 返回的是 sector吧
     def find_element(self, page: Page, element_name: str, action_type: str):
         """智能元素定位"""
 
@@ -22,7 +31,7 @@ class ElementLocator:
             selector = element_config.get('selector')
             print(f"     >>>buffer元素定位,{element_name}找selector>>>{selector}")
             if self._verify_element(page, selector):
-                return page.locator(selector)
+                return selector
 
         #  AI后备定位
         print(f"     >>>buffer元素定位,找selector>>>{element_name} SELECTOR 不符合预期")
@@ -33,7 +42,7 @@ class ElementLocator:
         """验证元素的唯一性"""        
         try:
             elementCount = page.locator(selector).count()
-            print(f"     >>>验证元素是否存在>>>number:::{elementCount}")
+            print(f"     >>>验证元素是否存在>>>{selector}<<< \n\n>>>number:::{elementCount}")
             
             if elementCount == 1:
                 return True

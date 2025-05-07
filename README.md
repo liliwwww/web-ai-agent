@@ -1,6 +1,25 @@
 # web-ai-agent
 
 
+##init_config.py是生成初始化的页面控件配置json.
+
+##debugConsole.py是调试工具，主要处理流程
+    1.根据用户prompt和 页面控件配置json， 生成执行指令actions(调用AI模型)
+    2.通过playwright，执行执行指令actions.
+
+
+
+
+## 因为py程序分包，如果跨包调用需要告诉python路径。
+
+# 获取 src 目录的绝对路径
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src'))
+print(f"src::{src_path}")
+# 将 src 目录添加到系统路径中
+sys.path.append(src_path)
+
+
+
 
 {
   "elements": [

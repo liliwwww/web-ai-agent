@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <title>添加任务</title>
+</head>
+
+<body class="bg-gray-100 p-8">
+    <h1 class="text-3xl font-bold mb-4">添加任务</h1>
+    <form method="post">
+        <div class="mb-4">
+            <label for="task_id" class="block text-gray-700 text-sm font-bold mb-2">任务 ID</label>
+            <input type="text" id="task_id" name="task_id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="cron_expression" class="block text-gray-700 text-sm font-bold mb-2">触发时间（格式：HH:MM）</label>
+            <input type="text" id="cron_expression" name="cron_expression" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="to" class="block text-gray-700 text-sm font-bold mb-2">收件人</label>
+            <input type="text" id="to" name="to" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="title" class="block text-gray-700 text-sm font-bold mb-2">主题</label>
+            <input type="text" id="title" name="title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="body" class="block text-gray-700 text-sm font-bold mb-2">内容</label>
+            <textarea id="body" name="body" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">添加</button>
+    </form>
+</body>
+
+</html>
+    

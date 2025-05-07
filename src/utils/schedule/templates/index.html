@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <title>任务列表</title>
+</head>
+
+<body class="bg-gray-100 p-8">
+    <h1 class="text-3xl font-bold mb-4">任务列表</h1>
+    <a href="{{ url_for('add') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">添加任务</a>
+    <table class="min-w-full bg-white border border-gray-300">
+        <thead>
+            <tr>
+                <th class="py-2 px-4 border-b">任务 ID</th>
+                <th class="py-2 px-4 border-b">触发时间</th>
+                <th class="py-2 px-4 border-b">收件人</th>
+                <th class="py-2 px-4 border-b">主题</th>
+                <th class="py-2 px-4 border-b">内容</th>
+                <th class="py-2 px-4 border-b">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task_id, task in tasks.items() %}
+            <tr>
+                <td class="py-2 px-4 border-b">{{ task_id }}</td>
+                <td class="py-2 px-4 border-b">{{ task['trigger']['hour'] }}:{{ task['trigger']['minute'] }}</td>
+                <td class="py-2 px-4 border-b">{{ task['kwargs']['to'] }}</td>
+                <td class="py-2 px-4 border-b">{{ task['kwargs']['title'] }}</td>
+                <td class="py-2 px-4 border-b">{{ task['kwargs']['body'] }}</td>
+                <td class="py-2 px-4 border-b">
+                    <a href="{{ url_for('execute', task_id=task_id) }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded mr-2">执行</a>
+                    <a href="{{ url_for('modify', task_id=task_id) }}" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-2 rounded mr-2">修改</a>
+                    <a href="{{ url_for('delete', task_id=task_id) }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">删除</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

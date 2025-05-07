@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}任务列表{% endblock %}
+
+{% block content %}
+    <a href="{{ url_for('add_task_page') }}" class="btn btn-primary mb-3">添加任务</a>
+    <a href="{{ url_for('task_logs') }}" class="btn btn-info mb-3">查看执行日志</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>任务ID</th>
+                <th>任务类型</th>
+                <th>触发规则</th>
+                <th>执行参数</th>
+                <th>最后执行时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task_id, task in tasks.items() %}
+            <tr>
+                <td>{{ task_id }}</td>
+                <td>{{ task.task_type }}</td>
+                <td>
+                    {{ task.trigger.type }}<br>
+                    <small class="text-muted">{{ task.trigger.params|tojson }}</small>
+                </td>
+                <td><pre>{{ task.params|tojson }}</pre></td>
+                <td>{{ task.last_execution_time or "未执行" }}</td>
+                <td>
+                    <a href="{{ url_for('execute_task_page', task_id=task_id) }}" class="btn btn-success btn-sm">立即执行</a>
+                    <a href="{{ url_for('modify_task_page', task_id=task_id) }}" class="btn btn-warning btn-sm">修改</a>
+                    <a href="{{ url_for('delete_task_page', task_id=task_id) }}" class="btn btn-danger btn-sm">删除</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

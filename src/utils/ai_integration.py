@@ -79,4 +79,6 @@ class AIIntegration:
                 }
             }
         )
-        return response.get("actions", [])
+
+        #直接返回, json中需要包含actions前缀
+        return response

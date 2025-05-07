@@ -34,3 +34,25 @@
 2025-04-17 18:06:40,755 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 400 Bad Request"
 2025-04-17 18:06:40,758 - utils.ai_integration - ERROR - AI½Ó¿Úµ÷ÓÃÊ§°Ü: Error code: 400 - {'error': {'message': "Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'.", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}
 2025-04-17 18:06:40,762 - utils.playwright_helpers - ERROR - AIÑ¡ÔñÆ÷»ñÈ¡Ê§°Ü: Error code: 400 - {'error': {'message': "Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'.", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}
+2025-04-18 17:46:06,718 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 17:46:12,432 - root - ERROR - Ö´ÐÐÊ§°Ü: DebugConsole.do_chrome() takes 2 positional arguments but 3 were given
+2025-04-18 17:50:15,265 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 17:50:20,349 - root - ERROR - Ö´ÐÐÊ§°Ü: DebugConsole.do_chrome() takes 2 positional arguments but 3 were given
+2025-04-18 17:55:49,350 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 17:55:55,122 - root - ERROR - Ö´ÐÐÊ§°Ü: 'list' object has no attribute 'get'
+2025-04-18 18:02:10,078 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:02:36,892 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:03:25,714 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:05:05,360 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:05:11,194 - root - ERROR - Ö´ÐÐÊ§°Ü: Page.title: Execution context was destroyed, most likely because of a navigation
+2025-04-18 18:05:37,665 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:05:43,407 - root - ERROR - Ö´ÐÐÊ§°Ü: Page.title: Execution context was destroyed, most likely because of a navigation
+2025-04-18 18:06:33,164 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:07:06,094 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:07:11,980 - root - ERROR - Ö´ÐÐÊ§°Ü: Page.title: Execution context was destroyed, most likely because of a navigation
+2025-04-18 18:07:42,362 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:07:47,818 - root - ERROR - Ö´ÐÐÊ§°Ü: Page.title: Execution context was destroyed, most likely because of a navigation
+2025-04-18 18:07:57,240 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:08:50,925 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:09:19,020 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:26:28,772 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"

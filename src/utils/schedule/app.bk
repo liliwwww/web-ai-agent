@@ -1,0 +1,54 @@
+from flask import Flask, render_template, request, redirect, url_for
+import task_console as task_mgmt
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    tasks = task_mgmt.list_tasks()
+    return render_template('index.html', tasks=tasks)
+
+
+@app.route('/add', methods=['GET', 'POST'])
+def add():
+    if request.method == 'POST':
+        task_id = request.form.get('task_id')
+        cron_expression = request.form.get('cron_expression')
+        to = request.form.get('to')
+        title = request.form.get('title')
+        body = request.form.get('body')
+        task_mgmt.add_task(task_id, cron_expression, task_mgmt.send_email, to=to, title=title, body=body)
+        return redirect(url_for('index'))
+    return render_template('add.html')
+
+
+@app.route('/modify/<task_id>', methods=['GET', 'POST'])
+def modify(task_id):
+    if task_id not in task_mgmt.list_tasks():
+        return "任务不存在", 404
+    if request.method == 'POST':
+        cron_expression = request.form.get('cron_expression')
+        to = request.form.get('to')
+        title = request.form.get('title')
+        body = request.form.get('body')
+        task_mgmt.modify_task(task_id, cron_expression, to=to, title=title, body=body)
+        return redirect(url_for('index'))
+    task = task_mgmt.list_tasks()[task_id]
+    return render_template('modify.html', task_id=task_id, task=task)
+
+
+@app.route('/delete/<task_id>')
+def delete(task_id):
+    task_mgmt.delete_task(task_id)
+    return redirect(url_for('index'))
+
+
+@app.route('/execute/<task_id>')
+def execute(task_id):
+    task_mgmt.execute_task(task_id)
+    return redirect(url_for('index'))
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -67,6 +67,10 @@ class DebugConsole(cmd.Cmd):
         logging.basicConfig(level=logging.INFO)
 
     def do_chrome(self, actions)-> List[Dict]:
+
+        print(f"_do_chrome1 {self}")
+        print(f"_do_chrome2 {actions}")
+        
         with sync_playwright() as p:
             #browser = p.chromium.launch(headless=False)
             #page = browser.new_page()
@@ -77,9 +81,17 @@ class DebugConsole(cmd.Cmd):
             browser = p.chromium.connect_over_cdp("http://127.0.0.1:9222")
             print("成功连接到 Chrome 调试端口")
 
-            # 获取现有上下文和页面
-            context = browser.contexts[0] if browser.contexts else browser.new_context()
-            page = context.pages[0] if context.pages else context.new_page()
+            # 枚举所有上下文
+            for context in browser.contexts:
+                print(f"Context ID: {context}")
+                # 枚举当前上下文下的所有页面
+                for page1 in context.pages:
+                    print(f"  Page URL: {page1.url}")
+                    if page1.url == 'http://39.105.217.139:8181/yhbackstage/Index/index':
+                        page = page1
+            print("自检完成")
+            print(f"\n\nPage title: {page.title()}\n\n")
+            print(">>Go")
 
 
             #网络监控集成    
@@ -112,7 +124,7 @@ class DebugConsole(cmd.Cmd):
             actions = self.agent._parse_command(arg)
             print(f"🔧 解析到 {len(actions)} 个操作")
             
-            self.do_chrome(self, actions)
+            self.do_chrome( actions)
             
         except Exception as e:
             logging.error(f"执行失败: {str(e)}")
@@ -230,43 +242,23 @@ class DebugConsole(cmd.Cmd):
         print("匹配元素:", elements)
 
 
-string_data = "{'actions': [{'element': '代理商名称输入框', 'action': 'text_input', 'value': 'wangdapeng'}, {'element': '审核状态下拉框', 'action': 'dropdown', 'value': '1'}, {'element': '查询按钮', 'action': 'clickable', 'value': ''}]}"
+string_data = "{'actions': [{'element': '代理商名称输入框', 'action': 'text_input', 'value': '1111'}, {'element': '审核状态下拉框', 'action': 'dropdown', 'value': '1'}, {'element': '查询按钮', 'action': 'clickable', 'value': ''}]}"
 text = "{'actions': [{'element': '查询按钮', 'action': 'clickable', 'value': ''}]}"
 
 
 if __name__ == "__main__":
     try:
-        # 原始字符串
+        #原始字符串
+        DebugConsole().cmdloop()
 
-        # 将单引号替换为双引号
-        text = string_data.replace("'", "\"")
-        actions = json.loads(text)
-        action_List = actions.get('actions',[])
-
-        '''
-        for idx, action in enumerate(action_List, 1):
-            print(f"\n⚡ 正在执行操作 {idx}/{len(action_List)}:")
-            print(f"  元素: {action['element']}")
-            print(f"  操作: {action['action']}")
-            if 'value' in action:
-                print(f"  值: {action['value']}")
-                
-
-        # 提取 element 数组
-        item_array = [item for item in actions.get('actions', [])]
-
-        for element in item_array:
-            print(element['element'])
-            print(element['action'])
-            print(element['value'])
-            print("--------------------")
-        '''
-    
-
-        print("AAAA")
-        cc = DebugConsole()
-        cc.do_chrome(actions)
-
-        #DebugConsole().cmdloop()
     except KeyboardInterrupt:
         print("\n操作已取消")
+
+
+#根据action，单步调试解析action
+#        print("AAAA")
+#        string_data = string_data.replace("'","\"")
+#        actions = json.loads(string_data)
+        
+#        cc = DebugConsole()
+#        cc.do_chrome(actions)

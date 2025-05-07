@@ -1,94 +1,129 @@
 {
-    "elements": [
-      {
-        "name": "代理商编号输入框",
-        "selector": "input[name='agent_num']",
-        "type": "text_input"
-      },
-      {
-        "name": "代理商名称输入框",
-        "selector": "input[name='agent_name']",
-        "type": "text_input"
-      },
-      {
-        "name": "法人身份证号精准查询框",
-        "selector": "input[name='_identity_num']",
-        "type": "text_input"
-      },
-      {
-        "name": "销售经理姓名输入框",
-        "selector": "#sm_name",
-        "type": "text_input"
-      },
-      {
-        "name": "业务员查询按钮（销售）",
-        "selector": "button#haha1",
-        "type": "clickable"
-      },
-      {
-        "name": "运营经理姓名输入框",
-        "selector": "input[name='maintain.sm_name']",
-        "type": "text_input"
-      },
-      {
-        "name": "业务员查询按钮（运营）",
-        "selector": "button#haha",
-        "type": "clickable"
-      },
-      {
-        "name": "登录账号输入框",
-        "selector": "#admin_name",
-        "type": "text_input"
-      },
-      {
-        "name": "部门选择下拉框",
-        "selector": "select[name='department']",
-        "type": "dropdown"
-      },
-      {
-        "name": "大区选择下拉框",
-        "selector": "select[name='argeaarea']",
-        "type": "dropdown"
-      },
-      {
-        "name": "分公司选择下拉框",
-        "selector": "select[name='branchoffice']",
-        "type": "dropdown"
-      },
-      {
-        "name": "审核状态下拉框",
-        "selector": "select[name='agent_status']",
-        "type": "dropdown"
-      },
-      {
-        "name": "代理商性质下拉框",
-        "selector": "select[name='agent_nature']",
-        "type": "dropdown"
-      },
-      {
-        "name": "添加时间起始日期选择器",
-        "selector": "input[name='startlocaldate']",
-        "type": "date_picker"
-      },
-      {
-        "name": "添加时间截止日期选择器",
-        "selector": "input[name='endlocaldate']",
-        "type": "date_picker"
-      },
-      {
-        "name": "查询按钮",
-        "selector": "button[data-icon='search']",
-        "type": "clickable"
-      },
-      {
-        "name": "清空查询按钮",
-        "selector": "a[onclick*='reloadForm']",
-        "type": "clickable"
-      },
-      {
-        "name": "添加代理商按钮",
-        "selector": "a[rel='AgentInfo_add']",
-        "type": "clickable"
-      }
-    ]
-  }
+  "elements": [
+    {
+      "name": "代理商编号输入框",
+      "selector": "form[action='/yhbackstage/AgentInfo/applylist'] input[name='agent_num']",
+      "type": "text_input",
+      "success_count": "0",
+      "last_used": ""
+    },
+    {
+      "name": "代理商名称输入框",
+      "selector": "form[action='/yhbackstage/AgentInfo/applylist'] input[type='text'][name='agent_name']",
+      "type": "text_input",
+      "success_count": 12,
+      "last_used": "2025-04-18T19:26:08.207774"
+    },
+    {
+      "name": "法人身份证号精准查询框",
+      "selector": "input[name='_identity_num']",
+      "type": "text_input",
+      "success_count": "0",
+      "last_used": ""
+    },
+    {
+      "name": "销售经理姓名输入框",
+      "selector": "#sm_name",
+      "type": "text_input",
+      "success_count": "0",
+      "last_used": ""
+    },
+    {
+      "name": "业务员查询按钮（销售）",
+      "selector": "button#haha1",
+      "type": "clickable",
+      "success_count": 1,
+      "last_used": "2025-04-18T17:28:11.556792"
+    },
+    {
+      "name": "运营经理姓名输入框",
+      "selector": "input[name='maintain.sm_name']",
+      "type": "text_input",
+      "success_count": "0",
+      "last_used": ""
+    },
+    {
+      "name": "业务员查询按钮（运营）",
+      "selector": "button#haha",
+      "type": "clickable",
+      "success_count": "0",
+      "last_used": ""
+    },
+    {
+      "name": "登录账号输入框",
+      "selector": "#admin_name",
+      "type": "text_input",
+      "success_count": "0",
+      "last_used": ""
+    },
+    {
+      "name": "部门选择下拉框",
+      "selector": "select[name='department']",
+      "type": "dropdown",
+      "success_count": "0",
+      "last_used": ""
+    },
+    {
+      "name": "大区选择下拉框",
+      "selector": "select[name='argeaarea']",
+      "type": "dropdown",
+      "success_count": "0",
+      "last_used": ""
+    },
+    {
+      "name": "分公司选择下拉框",
+      "selector": "select[name='branchoffice']",
+      "type": "dropdown",
+      "success_count": "0",
+      "last_used": ""
+    },
+    {
+      "name": "审核状态下拉框",
+      "selector": "select[name='agent_status']",
+      "type": "dropdown",
+      "success_count": 6,
+      "last_used": "2025-04-18T19:26:08.391786"
+    },
+    {
+      "name": "代理商性质下拉框",
+      "selector": "select[name='agent_nature']",
+      "type": "dropdown",
+      "success_count": "0",
+      "last_used": ""
+    },
+    {
+      "name": "添加时间起始日期选择器",
+      "selector": "input[name='startlocaldate']",
+      "type": "date_picker",
+      "success_count": "0"
+    },
+    {
+      "name": "添加时间截止日期选择器",
+      "selector": "input[name='endlocaldate']",
+      "type": "date_picker",
+      "success_count": "0",
+      "last_used": ""
+    },
+    {
+      "name": "查询按钮",
+      "selector": "form[action='/yhbackstage/AgentInfo/applylist'] button[type=submit][data-icon='search']",
+      "type": "clickable",
+      "success_count": 7,
+      "last_used": "2025-04-18T19:26:08.536537"
+    },
+    {
+      "name": "清空查询按钮",
+      "selector": "a[onclick*='reloadForm']",
+      "type": "clickable",
+      "success_count": "0",
+      "last_used": ""
+    },
+    {
+      "name": "添加代理商按钮",
+      "selector": "a[rel='AgentInfo_add']",
+      "type": "clickable",
+      "success_count": "0",
+      "last_used": "2025-04-18T17:23:24.156038"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
+import pickle
+import os
+import sys
+import time
+import logging
+
+
+from src.utils.schedule_up.tools_utils import send_email
+
+
+# 配置日志记录
+logging.basicConfig(
+    filename='scheduler.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+
+
+
+# 配置文件路径
+DB_FILE_PATH = r'C:\Users\wdp\project\web-ai-agent\src\utils\schedule\task.db'
+#DB_FILE_PATH = r'C:\Users\wdp\project\web-ai-agent\src\utils\schedule\task_up.db'
+
+# 配置持久化存储
+jobstores = {
+    'default': SQLAlchemyJobStore(url=f'sqlite:///{DB_FILE_PATH}')
+}
+
+scheduler = BackgroundScheduler(jobstores=jobstores)
+scheduler.start()
+
+# 任务持久化文件路径
+TASKS_FILE = r'C:\Users\wdp\project\web-ai-agent\src\utils\schedule\tasks.pkl'
+#TASKS_FILE = r'C:\Users\wdp\project\web-ai-agent\src\utils\schedule\tasks_up.pkl'
+
+# 尝试从文件中加载 tasks 字典
+if os.path.exists(TASKS_FILE):
+    with open(TASKS_FILE, 'rb') as f:
+        tasks = pickle.load(f)
+else:
+    tasks = {}
+
+
+def add_task(task_id, cron_expression, task_func, **kwargs):
+    try:
+        trigger = {'type': 'cron', 'hour': int(cron_expression.split(':')[0]), 'minute': int(cron_expression.split(':')[1])}
+        job = scheduler.add_job(task_func, 'cron', hour=trigger['hour'], minute=trigger['minute'], args=[], kwargs=kwargs, id=task_id)
+        tasks[task_id] = {'job': job, 'trigger': trigger, 'func': task_func, 'kwargs': kwargs}
+        # 保存 tasks 字典到文件
+        with open(TASKS_FILE, 'wb') as f:
+            pickle.dump(tasks, f)
+        print(f"任务>>> {task_id} 添加成功")
+    except Exception as e:
+        print(f"添加任务失败: {e}")
+
+
+def modify_task(task_id, cron_expression=None, **kwargs):
+    if task_id not in tasks:
+        print(f"任务 {task_id} 不存在")
+        return
+    try:
+        job = tasks[task_id]['job']
+        if cron_expression:
+            trigger = {'type': 'cron', 'hour': int(cron_expression.split(':')[0]), 'minute': int(cron_expression.split(':')[1])}
+            job.reschedule('cron', hour=trigger['hour'], minute=trigger['minute'])
+            tasks[task_id]['trigger'] = trigger
+        if kwargs:
+            job.modify(kwargs=kwargs)
+            tasks[task_id]['kwargs'] = kwargs
+        # 保存 tasks 字典到文件
+        with open(TASKS_FILE, 'wb') as f:
+            pickle.dump(tasks, f)
+        print(f"任务 {task_id} 修改成功")
+    except Exception as e:
+        print(f"修改任务失败: {e}")
+
+
+def delete_task(task_id):
+    if task_id not in tasks:
+        print(f"任务 {task_id} 不存在")
+        return
+    try:
+        scheduler.remove_job(task_id)
+        del tasks[task_id]
+        # 保存 tasks 字典到文件
+        with open(TASKS_FILE, 'wb') as f:
+            pickle.dump(tasks, f)
+        print(f"任务 {task_id} 删除成功")
+    except Exception as e:
+        print(f"删除任务失败: {e}")
+
+
+def list_tasks():
+    return tasks
+
+
+def execute_task(task_id):
+    if task_id not in tasks:
+        print(f"任务 {task_id} 不存在")
+        return
+    try:
+        task = tasks[task_id]
+
+        print(f">>>>execute_task1 {task}")
+        print(f">>>>execute_task2 {task['func']}")
+        print(f">>>>execute_task3 {task['kwargs']}")
+
+        task['func'](**task['kwargs'])
+        print(f"任务 {task_id} 立即执行成功")
+    except Exception as e:
+        print(f"执行任务失败: {e}")
+
+
+def test1():
+    # 测试添加任务
+    add_task('test_task_51', '10:00', send_email, to="test@example.com", title="测试邮件", body="这是一封测试邮件")
+    #add_task('test_task_3', '10:00', send_email, to="test@example.com", title="测试邮件", body="这是一封测试邮件")
+
+
+    # 测试修改任务
+    #modify_task('test_task_4', '14:40', to="new_test@example.com", title="新的测试邮件", body="这是一封新的测试邮件")
+
+    # 测试执行任务
+    execute_task('test_task_51')
+
+    # 测试列出任务
+    all_tasks = list_tasks()
+    print("当前所有任务信息：")
+    for task_id, task_info in all_tasks.items():
+        print(f"任务 ID: {task_id}")
+        print(f"触发时间: {task_info['trigger']['hour']}:{task_info['trigger']['minute']}")
+        print(f"任务函数: {task_info['func'].__name__}")
+        print(f"任务参数: {task_info['kwargs']}")
+        print("-" * 30)
+
+    # 测试删除任务
+    #delete_task('test_task_1')
+
+def main():
+    try:
+        # 这里可以添加一些初始化任务，例如添加示例任务
+        #add_task('test_task_1', '10:00', send_email, to="test@example.com", title="测试邮件", body="这是一封测试邮件")
+
+        # 让程序持续运行，以保证调度器可以持续监控任务执行
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        logging.info("程序被手动中断，正在停止调度器...")
+        scheduler.shutdown()
+        sys.exit(0)
+    except Exception as e:
+        logging.error(f"程序出现异常: {e}")
+        scheduler.shutdown()
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    test1()    

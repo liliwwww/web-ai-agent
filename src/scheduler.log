@@ -1,0 +1,63 @@
+2025-04-21 15:03:40,352 - INFO - Scheduler started
+2025-04-21 15:03:40,383 - WARNING -  * Debugger is active!
+2025-04-21 15:03:40,386 - INFO -  * Debugger PIN: 955-766-596
+2025-04-21 15:06:12,948 - INFO -  * Detected change in 'c:\\Users\\wdp\\project\\web-ai-agent\\src\\utils\\schedule\\task_console.py', reloading
+2025-04-21 15:23:45,919 - INFO - Scheduler started
+2025-04-21 15:23:45,968 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-21 15:23:45,968 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 15:23:45,969 - INFO -  * Restarting with stat
+2025-04-21 15:23:47,651 - INFO - Scheduler started
+2025-04-21 15:23:47,688 - WARNING -  * Debugger is active!
+2025-04-21 15:23:47,691 - INFO -  * Debugger PIN: 955-766-596
+2025-04-21 15:23:47,758 - INFO - 127.0.0.1 - - [21/Apr/2025 15:23:47] "GET / HTTP/1.1" 200 -
+2025-04-21 16:07:01,711 - INFO -  * Detected change in 'c:\\Users\\wdp\\project\\web-ai-agent\\src\\utils\\schedule\\task_management_up.py', reloading
+2025-04-21 16:07:02,988 - INFO -  * Restarting with stat
+2025-04-21 16:07:05,708 - INFO - Scheduler started
+2025-04-21 16:07:05,751 - WARNING -  * Debugger is active!
+2025-04-21 16:07:05,756 - INFO -  * Debugger PIN: 955-766-596
+2025-04-21 16:30:46,823 - INFO - Scheduler started
+2025-04-21 16:30:46,940 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-21 16:30:46,940 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 16:30:46,943 - INFO -  * Restarting with stat
+2025-04-21 16:30:48,689 - INFO - Scheduler started
+2025-04-21 16:30:48,766 - WARNING -  * Debugger is active!
+2025-04-21 16:30:48,772 - INFO -  * Debugger PIN: 955-766-596
+2025-04-21 16:31:23,356 - INFO - ³ÌÐò±»ÊÖ¶¯ÖÐ¶Ï£¬ÕýÔÚÍ£Ö¹µ÷¶ÈÆ÷...
+2025-04-21 16:31:23,360 - INFO - Scheduler has been shut down
+2025-04-21 16:31:23,563 - INFO - ³ÌÐò±»ÊÖ¶¯ÖÐ¶Ï£¬ÕýÔÚÍ£Ö¹µ÷¶ÈÆ÷...
+2025-04-21 16:31:23,563 - INFO - Scheduler has been shut down
+2025-04-21 16:31:53,117 - INFO - Scheduler started
+2025-04-21 16:31:53,199 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-21 16:31:53,199 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 16:31:53,201 - INFO -  * Restarting with stat
+2025-04-21 16:31:54,720 - INFO - Scheduler started
+2025-04-21 16:31:54,785 - WARNING -  * Debugger is active!
+2025-04-21 16:31:54,788 - INFO -  * Debugger PIN: 955-766-596
+2025-04-21 16:32:04,538 - INFO - ³ÌÐò±»ÊÖ¶¯ÖÐ¶Ï£¬ÕýÔÚÍ£Ö¹µ÷¶ÈÆ÷...
+2025-04-21 16:32:04,539 - INFO - Scheduler has been shut down
+2025-04-21 16:32:04,758 - INFO - ³ÌÐò±»ÊÖ¶¯ÖÐ¶Ï£¬ÕýÔÚÍ£Ö¹µ÷¶ÈÆ÷...
+2025-04-21 16:32:04,759 - INFO - Scheduler has been shut down
+2025-04-21 16:32:09,172 - INFO - Scheduler started
+2025-04-21 16:32:09,202 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-21 16:32:09,202 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 16:32:09,204 - INFO -  * Restarting with stat
+2025-04-21 16:32:10,727 - INFO - Scheduler started
+2025-04-21 16:32:10,748 - WARNING -  * Debugger is active!
+2025-04-21 16:32:10,751 - INFO -  * Debugger PIN: 955-766-596
+2025-04-21 16:34:18,407 - INFO - Scheduler started
+2025-04-21 16:34:18,452 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-21 16:34:18,452 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 16:34:18,453 - INFO -  * Restarting with stat
+2025-04-21 16:34:19,826 - INFO - Scheduler started
+2025-04-21 16:34:19,855 - WARNING -  * Debugger is active!
+2025-04-21 16:34:19,858 - INFO -  * Debugger PIN: 955-766-596
+2025-04-21 16:36:03,255 - INFO - 127.0.0.1 - - [21/Apr/2025 16:36:03] "GET / HTTP/1.1" 200 -
+2025-04-21 16:36:14,354 - INFO - 127.0.0.1 - - [21/Apr/2025 16:36:14] "GET / HTTP/1.1" 200 -
+2025-04-21 16:36:17,216 - INFO - 127.0.0.1 - - [21/Apr/2025 16:36:17] "GET /add HTTP/1.1" 200 -
+2025-04-21 16:36:26,124 - INFO - 127.0.0.1 - - [21/Apr/2025 16:36:26] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-04-21 16:36:26,138 - INFO - 127.0.0.1 - - [21/Apr/2025 16:36:26] "GET / HTTP/1.1" 200 -

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}修改任务 - {{ task_id }}{% endblock %}
+
+{% block content %}
+    <h2>修改任务：{{ task_id }}</h2>
+    <form method="post" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label>触发规则类型</label>
+            <select name="trigger_type" class="form-control" required>
+                <option value="date">日期触发器 (date)</option>
+                <option value="interval">间隔触发器 (interval)</option>
+                <option value="cron">Cron触发器 (cron)</option>
+                <option value="idle">空闲触发器 (idle)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>触发规则参数（JSON格式）</label>
+            <textarea name="trigger_params" class="form-control" rows="3" required>
+                {{ trigger_params|default("{}") }}
+            </textarea>
+        </div>
+
+        <div class="form-group">
+            <label>执行参数（JSON格式）</label>
+            <textarea name="params" class="form-control" rows="3" required>
+                {{ params|default("{}") }}
+            </textarea>
+        </div>
+
+        <button type="submit" class="btn btn-warning">更新任务</button>
+    </form>
+{% endblock %}

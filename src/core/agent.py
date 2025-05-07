@@ -8,6 +8,20 @@ from dotenv import load_dotenv
 from utils.ai_integration import AIIntegration  # 引入 AIIntegration 类
 from utils.playwright_helpers import ElementLocator
 from core.buffer_manager import BufferManager
+from core.ui_pw_select import select_option_and_verify
+
+
+##主要三个方法：
+
+1.#识别页面元素
+#    def recognize_elements(self, url: str):
+
+2.#AI解析 并执行命令
+#    def execute_command(self,  url:str, command: str):
+
+3.#执行page操作
+#    def _perform_action(self, page, action: Dict):    
+
 
 # 初始化日志
 logging.basicConfig(
@@ -186,19 +200,23 @@ class WebAIAgent:
         return self.client.generate_actions(prompt)
 
 
-    #执行单步操作
+    #执行page操作
     def _perform_action(self, page, action: Dict):
         """执行单个操作"""
         #print(">>>_perform_action 跳过智能定位")
         
 
         #上面都找到了。没有找到就不会有返回结果了
-        element = self.locator.find_element(
+        selector = self.locator.find_element(
             page,
             action["element"],
             action["action"]
         )
 
+        # 根据返回的selector，再次构建element.
+        # 因为，在select_option_and_verify()方法中，需要selector
+        # 在这个类里面，又不想再初始化buffer_manage了
+        element = page.locator(selector)
         if element is None:
             print("     _>>>perform_action 没有找到预期的 page.element 不执行操作")
             return
@@ -206,6 +224,9 @@ class WebAIAgent:
         #
         #element = page.locator(selector)
         print(f"     >>>_perform_action:{action["element"]}::{action["action"]}" )
+
+        #常用指令：
+        #document.querySelectorAll('input[name="agent_num"]') 
 
         try:
             #text   
@@ -223,10 +244,14 @@ class WebAIAgent:
             #select
             elif action["action"] == "dropdown":
                 print(f"     >>>_perform_action>>> select 第{action["value"]}个选项" )
-                element.select_option(action["value"])
+                # 不用element了
+                # element.select_option(action["value"],timeout=5000);
+                result = select_option_and_verify(page,selector,action["value"])
                 print(f"     >>>_perform_action>>> select ok" )
             else:
                 print(f">>>_perform_action>>> ACTION NOT SUPPORTED" )
+            
+            
             self.buffer.record_success(action["element"])
         except Exception as e:
             print(f">>>_perform_action ERROR ERROR ERROR {e}")

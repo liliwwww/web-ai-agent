@@ -1,0 +1,40 @@
+import openai
+import schedule
+import time
+import smtplib
+from subprocess import run
+from email.mime.text import MIMEText
+
+
+
+# 定义工具
+def send_email(to, title, body):
+    msg = MIMEText(body)
+    msg['Subject'] = title
+    msg['To'] = to
+    msg['From'] = 'wangdapeng@umpay.com'
+    with smtplib.SMTP('smtp.umpay.com') as smtp:
+        print("eee1:")
+        smtp.login('wangdapeng@umpay.com', '1q2w3e4rMAIL')
+        print("eee2:")
+        smtp.send_message(msg)
+        print("eee3:")
+
+
+
+# 使用示例
+if __name__ == "__main__":
+    body =f""" 
+导入模块：
+from email.mime.text import MIMEText：导入 MIMEText 类。
+
+import smtplib：导入用于发送邮件的模块。
+
+创建邮件正文：
+msg = MIMEText(body)：将邮件正文 body 封装成一个 MIMEText 对象。
+
+设置邮件信息：
+msg['Subject']、msg['To'] 和 msg['From']：设置邮件的主题、收件人和发件人。这些是邮件的头部字段，MIMEText 对象支持像字典一样操作。
+"""    
+    
+    send_email("306098944@qq.com","DeepSeek Test", body)

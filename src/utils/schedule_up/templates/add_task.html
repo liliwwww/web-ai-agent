@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}添加任务{% endblock %}
+
+{% block content %}
+    <h2>添加新任务</h2>
+    <form method="post" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label>任务ID</label>
+            <input type="text" name="task_id" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label>触发规则类型</label>
+            <select name="trigger_type" class="form-control" required>
+                <option value="date">日期触发器 (date)</option>
+                <option value="interval">间隔触发器 (interval)</option>
+                <option value="cron">Cron触发器 (cron)</option>
+                <option value="idle">空闲触发器 (idle)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>触发规则参数（JSON格式）</label>
+            <textarea name="trigger_params" class="form-control" rows="3" required>
+                {<!-- 示例：日期触发器参数 -->"run_date": "2025-12-10 08:00:00"}
+            </textarea>
+            <small class="form-text text-muted">根据触发器类型填写参数（如：{"minutes": 5}）</small>
+        </div>
+
+        <div class="form-group">
+            <label>任务类型</label>
+            <select name="task_type" class="form-control" required>
+                {% for task_type in task_types %}
+                <option value="{{ task_type }}">{{ task_type }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>执行参数（JSON格式）</label>
+            <textarea name="params" class="form-control" rows="3" required>
+                {<!-- 示例：邮件参数 -->"to": "user@example.com", "title": "通知", "body": "内容"}
+            </textarea>
+            <small class="form-text text-muted">根据任务类型填写参数（如：{"phone": "13800000000", "message": "短信内容"}）</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">提交任务</button>
+    </form>
+{% endblock %}

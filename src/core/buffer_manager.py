@@ -6,6 +6,9 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+#管理页面控件json
+#包括，增，改，并记录调用日志。
+
 class BufferManager:
     def __init__(self, config_dir: Path, default_profile: str = "default"):
         self.config_dir = config_dir
@@ -86,10 +89,21 @@ class BufferManager:
 
     def record_success(self, element_name: str, profile: str = None):
         """记录成功操作"""
+        print(f"record_success>>profile")
         config = self._load_config(profile)
-        element = config['elements'].get(element_name, {})
-        element['success_count'] = element.get('success_count', 0) + 1
-        element['last_used'] = datetime.now().isoformat()
+        elements = config['elements']
+        print( f"element length::{len(elements)}" )
+        
+        for element in elements:
+            if element["name"] == element_name:
+                try:
+                    element["success_count"] = int(element["success_count"]) + 1
+                    element['last_used'] = datetime.now().isoformat()
+                    print(f"已将 {element_name} 的 success_count 增加到 {element['success_count']}")
+                except ValueError:
+                    print(f"错误: {element_name} 的 success_count 不是有效的整数。")
+            
+        #写到文件中
         self._save_config(config, profile)
 
     def manual_update(self, element_name: str, updates: Dict, profile: str = None):
